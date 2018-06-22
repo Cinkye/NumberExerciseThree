@@ -9,9 +9,10 @@ class AbstractNumber
 {
  public:
  virtual void print();
- virtual AbstractNumber* add(AbstractNumber*);
- virtual AbstractNumber* mul(AbstractNumber*);
- float a;
+ virtual AbstractNumber* operator+(AbstractNumber&);
+ virtual AbstractNumber* operator*(AbstractNumber&);
+ virtual void SetNumber(double);
+ virtual double GetNumber();
  private:
  protected:
 };

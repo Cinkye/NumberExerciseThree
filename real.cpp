@@ -3,27 +3,36 @@
 #include <iostream>
 using namespace std;
 
-RealNumber::RealNumber(float f=0)
+RealNumber::RealNumber(double f=0)
 {
  a = f;
 }
 
-AbstractNumber* RealNumber::add(AbstractNumber* other)
+AbstractNumber* RealNumber::operator+(AbstractNumber& other)
 {
  AbstractNumber* tmp = new RealNumber;
- tmp->a = a + other->a;
+ tmp->SetNumber(GetNumber() + other.GetNumber());
  return tmp;
 }
 
-AbstractNumber* RealNumber::mul(AbstractNumber* other)
+AbstractNumber* RealNumber::operator*(AbstractNumber& other)
 {
  AbstractNumber* tmp = new RealNumber;
- tmp->a = a * other->a;
+ tmp->SetNumber(GetNumber() * other.GetNumber());
  return tmp;
 }
 
 void RealNumber::print()
 {
- cout << a << endl;
+ cout << GetNumber() << endl;
 }
 
+void RealNumber::SetNumber(double i)
+{
+ a = i;
+}
+
+double RealNumber::GetNumber()
+{
+ return a;
+}
