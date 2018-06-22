@@ -25,3 +25,12 @@ double AbstractNumber::GetNumber()
 {
 return 0.0;
 }
+
+void AbstractNumber::SetVir(double i)
+{
+}
+
+double AbstractNumber::GetVir()
+{
+return 0.0;
+}

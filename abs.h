@@ -13,6 +13,8 @@ class AbstractNumber
  virtual AbstractNumber* operator*(AbstractNumber&);
  virtual void SetNumber(double);
  virtual double GetNumber();
+ virtual void SetVir(double);
+ virtual double GetVir();
  private:
  protected:
 };

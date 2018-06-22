@@ -1,5 +1,6 @@
 #include "real.h"
 #include "int.h"
+#include "com.h"
 #include <iostream>
 using namespace std;
 
@@ -40,6 +41,24 @@ int main()
  q8=(*q5*(*q6));
  q8->print();
  cout << endl;
+
+ //Testing class ComplexNumber
+ cout << "Testing class ComplexNumber" << endl;
+ AbstractNumber* c1 = new ComplexNumber(1,1);
+ AbstractNumber* c2 = new ComplexNumber(1,1);
+ AbstractNumber* c3 = new ComplexNumber(0,0);
+ AbstractNumber* c4 = new ComplexNumber(0,0);
+ cout << "c1 = ";
+ c1->print();
+ cout << endl << "c2 = ";
+ c2->print();
+ c3=((*c1)+(*c2));
+ cout << endl << "c1 + c2 = ";
+ c3->print();
+ c4=((*c1)*(*c2));
+ cout << endl << "c1 * c2 = ";
+ c4->print();
+
  return 0;
 }
  
